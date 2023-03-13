@@ -81,6 +81,8 @@ a:hover { text-decoration: underline; }
 }
 
 h2 { font-size: 2.5rem;}
+
+
 /* HEADER */
 
 header {
@@ -117,6 +119,8 @@ header {
 
 /* MAIN  */
 
+/* SECTION 1  */
+
 .hero-content {
     max-width: 75rem;
     margin: 0 auto;
@@ -140,9 +144,15 @@ h1 { font-size: 5rem; }
     background-size: cover;
 }
 
+/* SECTION 2  */
+
+.margin-bottom50 { margin-bottom: 3.125rem; }
+
 .cont2 { 
     margin-top: 9.375rem;
 }
+
+.column-h950 { height: 59.375rem;}
 
 .col60 > img {
     width: 100%;
