@@ -264,6 +264,28 @@ h1 { font-size: 5rem; }
     height: 50%;
 }
 
+svg path {
+    fill: white;
+ }
+
+svg {
+    width: 50%;
+    height: 50%;
+}
+
+#black-svg {
+    width: 12.5rem;
+    height: 6.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.bg-color-scroll-y {
+    padding: 2.5rem;
+    overflow-y: scroll;
+}
+
+.bg-color-scroll-y svg path{ fill: #2b2b2b; }
+
 /* SECTION FREE SUB */
 
 .start-sub-free {
@@ -287,20 +309,19 @@ h1 { font-size: 5rem; }
     transition: transform 0.5s ease-in-out;
 }
 
-.arrow-down:hover {
+.arrow-btn:hover {
     transform: rotate(180deg);
   }
-
 
 .additional-content {
     display: none;
     background-color: #f5f5f5;
     padding: 20px;
 }
-/* 
-.arrow-down + .additional-content {
+
+.arrow-btn:hover + .additional-content {
     display: block;
-} */
+} 
 /* FOOTER  */
 
 .footer-boxed {
