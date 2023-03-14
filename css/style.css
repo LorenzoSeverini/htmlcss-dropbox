@@ -24,12 +24,16 @@ body { font-family: 'Open Sans', sans-serif; }
 .bg-color-scroll-y { background-color: #f5f5f5; }
 
 .width { width: 100%; }
+.w300 { width: 18.75rem;}
+
 .height { height: 100%; }
 .min-height { min-height: 34.375rem; }
+.h40 { height: 2.5rem;}
 .h100 { height: 100%; }
 .h400 { height: 25rem;}
 .h730 { height: 45.625rem;}
 .vh100 { height: 100vh; }
+
 
 
 .text-left { text-align: left; }
@@ -40,9 +44,11 @@ body { font-family: 'Open Sans', sans-serif; }
 
 .col15 { width: 15%; }
 .col30 { width: 30%; }
+.col40 { width: 40%; }
 .col60 { width: 60%; }
 .col70 { width: 70%; }
 
+/* FLEX  */
 
 .flex { display: flex; }
 
@@ -52,11 +58,20 @@ body { font-family: 'Open Sans', sans-serif; }
 
 .wrap { flex-wrap: wrap; }
 
+.flex-column { 
+    display: flex;
+    align-items: flex-start; 
+    flex-direction: column;
+} 
+
+/* Boxed */
 
 .boxed {
     max-width: 62.5rem;
     margin: 0 auto;
 }
+
+/* A LINK*/
 
 .a-noline {
     color: #2b2b2b;
@@ -64,6 +79,8 @@ body { font-family: 'Open Sans', sans-serif; }
 }
 
 a:hover { text-decoration: underline; }
+
+/* BUTTON  */
 
 .btn-blue {
     background-color: #0061ff;
@@ -78,13 +95,27 @@ a:hover { text-decoration: underline; }
     cursor: pointer;
 }
 
+/* H n BORDER  */
+
 h2 { font-size: 2.5rem;}
 
 h3 { font-size: 1.5625rem; } 
 
 .border { border: 1px solid rgba(0, 0, 0, 0.288); }
 
+/* MARGIN  */
+
+.margin-bottom20 { margin-bottom: 1.25rem;}
+
+.margin-bottom50 { margin-bottom: 3.125rem; }
+
+.margin-top10 { margin-top: .625rem;}
+
+.margin-top25 { margin-top: 1.625rem; }
+
 .margin-top40 { margin-top: 2.5rem;}
+
+.margin-top150 { margin-top: 9.375rem; }
 
 /* HEADER */
 
@@ -140,14 +171,7 @@ h1 { font-size: 5rem; }
 
 .cont1 { margin-top: 50px; }
 
-.col30 { 
-    align-items: flex-start; 
-    flex-direction: column;
-}
-
 .col30 p { font-size: 1.25rem;}
-
-.margin-bottom20 { margin-bottom: 1.25rem;}
 
 .col70 { 
     background-image: url(../img/jumbo.png);
@@ -158,25 +182,37 @@ h1 { font-size: 5rem; }
 
 /* SECTION SUB PLAN  */
 
-.margin-bottom50 { margin-bottom: 3.125rem; }
-
 .cont2 { 
     margin-top: 9.375rem;
 }
 
 .column-h950 { height: 59.375rem;}
 
-.margin-top25 { margin-top: 1.625rem; }
-
-.flex-contact-client {
+.col40-sub { 
+    height: 40%;  
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1.5625rem;
 }
 
-/* SECTION CUSTOMER SERVICE  */
+.col60-sub { 
+    height: 60%; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding: 1.5625rem;
+}
+.hr-sub1 { width: 100%; }
 
-.margin-top150 { margin-top: 9.375rem; }
+.hr-sub2 { width: 60%; }
+
+.padding-bottom40 { padding-bottom: 2.5rem; }
+
+.padding-bottom20 { padding-bottom: 1.25rem; }
+
+/* SECTION CUSTOMER SERVICE  */
 
 .btn-white {
     background-color: white;
