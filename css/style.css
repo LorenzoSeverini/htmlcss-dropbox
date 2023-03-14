@@ -9,11 +9,18 @@
 body { font-family: 'Open Sans', sans-serif; }
 
 
-.bg-color-blue {background-color: #0061ff;}
+.bg-color-blue { background-color: #0061ff; }
 .bg-color-white { background-color: white }
 .bg-color-azure { background-color: #b4d0e7; }
-.bg-color-darkmagenta { background-color: darkmagenta; }
 .bg-color-black { background-color: #000000; }
+.bg-color-designit { background-color: #a2d39b; }
+.bg-color-arizona { background-color: #61082b; }
+.bg-color-tops { background-color: #ff1c1c; }
+.bg-color-florida { background-color: #0093ce; }
+.bg-color-world { background-color: #d5001f; }
+.bg-color-planet { background-color: #0d2481; }
+.bg-color-hearts { background-color: #b4d0e7; }
+.bg-color-clear { background-color: #ffd830; }
 
 .width { width: 100%; }
 .height { height: 100%; }
@@ -29,18 +36,10 @@ body { font-family: 'Open Sans', sans-serif; }
 
 .padding15 { padding: .9375rem; }
 
-.col10 { width: 10%; }
 .col15 { width: 15%; }
-.col20 { width: 20%; }
-.col25 { width: 25%; }
 .col30 { width: 30%; }
-.col40 { width: 40%; }
-.col50 { width: 50%; }
 .col60 { width: 60%; }
 .col70 { width: 70%; }
-.col80 { width: 80%; }
-.col90 { width: 90%; }
-.col100 { width: 100%; }
 
 
 .flex { display: flex; }
@@ -79,11 +78,20 @@ a:hover { text-decoration: underline; }
 
 h2 { font-size: 2.5rem;}
 
+h3 { font-size: 1.5625rem; } 
+
+.border { border: 1px solid rgba(0, 0, 0, 0.288); }
+
+.margin-top40 { margin-top: 2.5rem;}
 
 /* HEADER */
 
 header {
     height: 5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: -5.5px 8.5px 8.5px -3.5px #dddddd;
 }
 
 .margin-left {
@@ -114,9 +122,11 @@ header {
     transform: translate(0em, 0.2em);
 }
 
+
 /* MAIN  */
 
-/* SECTION 1  */
+
+/* HERO SECTION  */
 
 .hero-content {
     max-width: 75rem;
@@ -125,8 +135,6 @@ header {
 }
 
 h1 { font-size: 5rem; }
-
-.border { border: 1px solid rgba(0, 0, 0, 0.288); }
 
 .cont1 { margin-top: 50px; }
 
@@ -137,12 +145,16 @@ h1 { font-size: 5rem; }
 
 .col30 p { font-size: 1.25rem;}
 
+.margin-bottom20 { margin-bottom: 1.25rem;}
+
 .col70 { 
     background-image: url(../img/jumbo.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: -150px;
 }
 
-/* SECTION 2  */
+/* SECTION SUB PLAN  */
 
 .margin-bottom50 { margin-bottom: 3.125rem; }
 
@@ -160,7 +172,7 @@ h1 { font-size: 5rem; }
     justify-content: space-between;
 }
 
-/* SECTION 3  */
+/* SECTION CUSTOMER SERVICE  */
 
 .margin-top150 { margin-top: 9.375rem; }
 
@@ -177,6 +189,8 @@ h1 { font-size: 5rem; }
     cursor: pointer;
 }
 
+/* SECTION PARTNER  */
+
 .flex1 {
     display: flex;
     flex-wrap: wrap;
@@ -184,30 +198,41 @@ h1 { font-size: 5rem; }
     justify-content: flex-start;
 }
 
-h3 { font-size: 1.5625rem; } 
+/* SECTION HOW IT WORKS DROPBOX */
 
 .section4-img {
     width: 100%;
     height: calc(100% / 3);
 }
 
+/* SECTION FIND PARTNER  */
+
 .col60 > img {
     width: 100%;
     height: 100%;
 }
 
-.margin-top40 { margin-top: 2.5rem;}
+/* SECTION SPONSOR  */
 
 .column-sponsor {
     width: calc(100% / 3);
     height: calc(100vw / 3);
 }
 
+.div-interno {
+    width: 50%;
+    height: 50%;
+}
+
+/* SECTION FREE SUB */
+
 .start-sub-free {
     height: 22.1875rem;
 }
 
 .align-itmes-center { align-items: center; }  
+
+/* SECTION FAQ  */
 
 /* FOOTER  */
 
