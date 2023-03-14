@@ -21,12 +21,14 @@ body { font-family: 'Open Sans', sans-serif; }
 .bg-color-planet { background-color: #0d2481; }
 .bg-color-hearts { background-color: #b4d0e7; }
 .bg-color-clear { background-color: #ffd830; }
+.bg-color-scroll-y { background-color: #f5f5f5; }
 
 .width { width: 100%; }
 .height { height: 100%; }
 .min-height { min-height: 34.375rem; }
 .h100 { height: 100%; }
 .h400 { height: 25rem;}
+.h730 { height: 45.625rem;}
 .vh100 { height: 100vh; }
 
 
@@ -233,6 +235,12 @@ h1 { font-size: 5rem; }
 .align-itmes-center { align-items: center; }  
 
 /* SECTION FAQ  */
+
+.faq { flex-direction: column; }
+
+.margin50-0 { margin: 3.125rem 0;}
+
+.padding-right-50 { padding-right: 50px; }
 
 /* FOOTER  */
 
