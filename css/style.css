@@ -242,10 +242,31 @@ h1 { font-size: 5rem; }
 
 .padding-right-50 { padding-right: 50px; }
 
+.cont-relative { position: relative; }
+
+.arrow-btn {
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.arrow-down:hover {
+    transform: rotate(180deg);
+  }
+
+
+.additional-content {
+    display: none;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+/* 
+.arrow-down + .additional-content {
+    display: block;
+} */
 /* FOOTER  */
 
 .footer-boxed {
-     max-width: 68.75rem;
+    max-width: 68.75rem;
     margin: 0 auto;    
 }
 
