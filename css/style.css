@@ -8,7 +8,6 @@
 
 body { font-family: 'Open Sans', sans-serif; }
 
-
 .bg-color-blue { background-color: #0061ff; }
 .bg-color-white { background-color: white }
 .bg-color-azure { background-color: #b4d0e7; }
@@ -23,24 +22,22 @@ body { font-family: 'Open Sans', sans-serif; }
 .bg-color-clear { background-color: #ffd830; }
 .bg-color-scroll-y { background-color: #f5f5f5; }
 
+
 .width { width: 100%; }
 .w300 { width: 18.75rem;}
 
-.height { height: 100%; }
 .min-height { min-height: 34.375rem; }
-.h40 { height: 2.5rem;}
+.min-height70 { min-height: 1120px; } 
+.h40 { height: 2.5rem; }
 .h100 { height: 100%; }
-.h400 { height: 25rem;}
-.h730 { height: 45.625rem;}
+.h400 { height: 25rem; }
+.h730 { height: 45.625rem; }
 .vh100 { height: 100vh; }
-
 
 
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
-
-.padding15 { padding: .9375rem; }
 
 .col15 { width: 15%; }
 .col30 { width: 30%; }
@@ -71,16 +68,20 @@ body { font-family: 'Open Sans', sans-serif; }
     margin: 0 auto;
 }
 
-/* A LINK*/
+/* A LINK */
 
 .a-noline {
     color: #2b2b2b;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-a:hover { text-decoration: underline; }
+a:hover { 
+    opacity: 0.8; 
+    transition: scale(2);
+}
 
-/* BUTTON  */
+/* BUTTON */
 
 .btn-blue {
     background-color: #0061ff;
@@ -94,6 +95,10 @@ a:hover { text-decoration: underline; }
     margin: 4px 2px;
     cursor: pointer;
 }
+
+.btn-blue:hover { background: linear-gradient(90deg, rgba(0,97,255) 0%, rgba(0,60,255) 100%); }
+
+.btn-blue:active { transform: translate(0em, 0.2em); }
 
 /* H n BORDER  */
 
@@ -117,7 +122,31 @@ h3 { font-size: 1.5625rem; }
 
 .margin-top40 { margin-top: 2.5rem; }
 
+.margin50-0 { margin: 3.125rem 0; }
+
 .margin-top150 { margin-top: 9.375rem; }
+
+.margin-right10 { margin-right: .625rem; }
+
+.margin-right20 { margin-left: 1.25rem; }
+
+.margin-left { margin-left: 1.25rem; }
+
+.scroll-margin-top80 { scroll-margin-top: 5rem; }
+
+/* PADDING  */
+
+.padding15 { padding: .9375rem; }
+
+.padding30 { padding: 1.875rem; }
+
+.padding-left10 { padding-left: .625rem;}
+
+.padding-right-50 { padding-right: 3.125rem; }
+
+.padding-bottom20 { padding-bottom: 1.25rem; }
+
+.padding-bottom40 { padding-bottom: 2.5rem; }
 
 /* HEADER */
 
@@ -129,20 +158,12 @@ header {
     box-shadow: -5.5px 8.5px 8.5px -3.5px #dddddd;
 }
 
-.margin-left {
-    margin-left: 1.25rem;
-}
-
-.margin-right {
-    margin-left: 1.25rem;
-}
-
 .btn-nav {
     font-size: 16px;
     padding: 0.4em 1em;
     border: transparent;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    background: dodgerblue;
+    background: #0061ff;
     color: white;
     border-radius: 4px;
     text-decoration: none;
@@ -150,30 +171,26 @@ header {
 
 .btn-nav:hover {
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(0,97,255) 0%, rgba(0,60,255) 100%);
 }
 
-.btn-nav:active {
-    transform: translate(0em, 0.2em);
-}
-
+.btn-nav:active { transform: translate(0em, 0.2em); } 
 
 /* MAIN  */
-
 
 /* HERO SECTION  */
 
 .hero-content {
     max-width: 75rem;
     margin: 0 auto;
-    padding-top: 6.25rem;
+    padding-top: 11rem;
 }
 
 h1 { font-size: 5rem; }
 
 .cont1 { margin-top: 50px; }
 
-.col30 p { font-size: 1.25rem;}
+.col30 p { font-size: 1.25rem; }
 
 .col70 { 
     background-image: url(../img/jumbo.png);
@@ -182,13 +199,69 @@ h1 { font-size: 5rem; }
     margin-bottom: -150px;
 }
 
-/* SECTION SUB PLAN  */
+/* SUB PLAN SECTION */
 
-.cont2 { 
-    margin-top: 9.375rem;
+/* Hide the default checkbox */
+.container-radio-button input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.container-radio-button {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+  /* Create a custom checkbox */
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.34em;
+    width: 1.3em;
+    background-color: #ccc;
+    transition: .4s ease-in-out;
+    border-radius: 50%;
+}
+  
+.checkmark:hover {
+    background-color: grey;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.container-radio-button input:checked ~ .checkmark {
+    background-color: rgba(0,97,255);
+}
+  
+ /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.container-radio-button input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+.container-radio-button .checkmark:after {
+    left: 0.25em;
+    top: 0.29em;
+    width: 0.50em;
+    height: 0.50em;
+    border: solid white;
+    background-color: white;
+    border-radius: 50%;
 }
 
-.column-h950 { height: 59.375rem;}
+.column-h950 { height: 59.375rem; }
 
 .col40-sub { 
     height: 40%;  
@@ -211,13 +284,14 @@ h1 { font-size: 5rem; }
 
 .hr-sub2 { width: 60%; }
 
-.padding-bottom40 { padding-bottom: 2.5rem; }
+.fa-check { color: dodgerblue; }
 
-.padding-bottom20 { padding-bottom: 1.25rem; }
+.flex-check { 
+    display: flex;
+    align-items: baseline;
+}
 
-.fa-check { color: dodgerblue;}
-
-/* SECTION CUSTOMER SERVICE  */
+/* CUSTOMER SERVICE SECTION */
 
 .btn-white {
     background-color: white;
@@ -232,7 +306,11 @@ h1 { font-size: 5rem; }
     cursor: pointer;
 }
 
-/* SECTION PARTNER  */
+.btn-white:hover { background: linear-gradient(90deg, rgba(255,255,255) 0%, rgb(241, 240, 241) 100%); }
+
+.btn-white:active { transform: translate(0em, 0.2em); }
+
+/* PARTNER SECTION  */
 
 .flex1 {
     display: flex;
@@ -241,21 +319,21 @@ h1 { font-size: 5rem; }
     justify-content: flex-start;
 }
 
-/* SECTION HOW IT WORKS DROPBOX */
+/* HOW IT WORKS DROPBOX SECTION  */
 
 .section4-img {
     width: 100%;
     height: calc(100% / 3);
 }
 
-/* SECTION FIND PARTNER  */
+/* FIND PARTNER SECTION  */
 
 .col60 > img {
     width: 100%;
     height: 100%;
 }
 
-/* SECTION SPONSOR  */
+/* SPONSOR SECTION   */
 
 .column-sponsor {
     width: calc(100% / 3);
@@ -281,6 +359,16 @@ svg path {
     margin-bottom: 2.5rem;
 }
 
+.svg-hover { transition: 0.3s ease-in-out; }
+
+.svg-hover:hover { transform: scale(2); }
+
+#svg-hover-flo { transition: 0.3s ease-in-out; }
+
+#svg-hover-flo:hover { transform: scale(1.5); }
+
+#florida-uni { padding: 3.125rem; } 
+
 .bg-color-scroll-y {
     padding: 2.5rem;
     overflow-y: scroll;
@@ -296,40 +384,33 @@ svg path {
     margin-bottom: 2.5rem
 }
 
-/* SECTION FREE SUB */
+/* FREE SUB SECTION  */
 
 .start-sub-free { height: 22.1875rem; }
 
 .align-itmes-center { align-items: center; }  
 
-/* SECTION FAQ  */
+/* FAQ SECTION   */
 
 .faq { flex-direction: column; }
 
-.margin50-0 { margin: 3.125rem 0;}
-
-.padding-right-50 { padding-right: 50px; }
-
-.cont-relative { position: relative; }
-
 .arrow-btn {
+    position: relative;
+    height: 1.25rem;
     cursor: pointer;
-    transition: transform 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
-.arrow-btn:hover {
-    transform: rotate(180deg);
-  }
+.faq-cont:hover .arrow-btn { transform: rotate(180deg); }
 
 .additional-content {
     display: none;
     background-color: #f5f5f5;
-    padding: 20px;
+    padding: 1.25rem;
+    margin-top: 1.875rem;
 }
 
-.arrow-btn:hover + .additional-content {
-    display: block;
-} 
+.faq-cont:hover .arrow-btn + .additional-content { display: block; } 
 
 /* FOOTER  */
 
@@ -341,8 +422,13 @@ svg path {
 .a-noline-white {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
-.a-noline-white:hover { text-decoration: underline; }
+
+.a-noline-white:hover {  
+    opacity: 0.8; 
+    transition: scale(2); 
+}
 
 footer h3 { color: white; }
 
@@ -350,6 +436,7 @@ footer h3 { color: white; }
     height: 18.75rem;
     flex-direction: column;
 }
+
 .col15 div{
     margin-top: .9375rem;
 }
@@ -357,13 +444,23 @@ footer h3 { color: white; }
 .color-white { 
     color: white; 
     height: 7.5rem;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 8.125rem;
 }
 
-.position-absolute { 
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+.footer-lang {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .3125rem;
+    height: 5rem;
 }
+
+#icon-footer {
+    line-height: 2;
+    height: 1.25rem;
+    vertical-align: bottom;
+ }
