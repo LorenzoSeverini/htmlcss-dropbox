@@ -108,6 +108,8 @@ h3 { font-size: 1.5625rem; }
 
 .border { border: 1px solid rgba(0, 0, 0, 0.288); }
 
+ul { list-style-type: none; }
+  
 /* MARGIN  */
 
 .margin-bottom20 { margin-bottom: 1.25rem;}
@@ -154,8 +156,10 @@ header {
     height: 5rem;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     box-shadow: -5.5px 8.5px 8.5px -3.5px #dddddd;
+    z-index: 100;
 }
 
 .btn-nav {
@@ -288,8 +292,6 @@ h1 { font-size: 5rem; }
 
 /* RADIO BUTTON CHECKBOX FINISH*/
 
-.column-h950 { height: 59.375rem; }
-
 .col40-sub { 
     height: 40%;  
     display: flex;
@@ -337,21 +339,9 @@ h1 { font-size: 5rem; }
 
 .btn-white:active { transform: translate(0em, 0.2em); }
 
-/* PARTNER SECTION  */
-
-.flex1 {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: flex-start;
-}
-
 /* HOW IT WORKS DROPBOX SECTION  */
 
-.section4-img {
-    width: 100%;
-    height: calc(100% / 3);
-}
+.section4-img { width: 100%; }
 
 /* FIND PARTNER SECTION  */
 
@@ -464,7 +454,7 @@ footer h3 { color: white; }
     flex-direction: column;
 }
 
-.col15 div{
+.col15 li{
     margin-top: .9375rem;
 }
 
@@ -490,4 +480,4 @@ footer h3 { color: white; }
     line-height: 2;
     height: 1.25rem;
     vertical-align: bottom;
- }
+}
